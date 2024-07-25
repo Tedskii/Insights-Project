@@ -1,0 +1,126 @@
+@use "../base/base" as *;
+@use "../abstract/colors" as *;
+@use "../abstract/mixins" as *;
+@use "../base/typography" as *;
+
+.banner {
+  background-image: url(/dist/img/banner-img.png);
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__wrapper {
+    @include gridEven(1, 2rem);
+    h1 {
+      color: $clr-light;
+      font-size: 4rem;
+      font-weight: 400;
+      text-align: center;
+      margin-bottom: 5rem;
+    }
+    .banner__btn {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      a {
+        width: 90%;
+        margin: 0 auto;
+        font-weight: normal;
+        font-size: 2rem;
+      }
+    }
+  }
+  @include mediaQuery($break-lg) {
+    &__wrapper {
+      h1 {
+        font-size: 60px;
+      }
+      .banner__btn {
+        @include gridEven(2, 2rem);
+        max-width: 50rem;
+        margin: 0 auto;
+        a {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+.services {
+  padding: 5rem 0;
+  &Title {
+    text-align: center;
+    padding-bottom: 5rem;
+    h2 {
+      color: $clr-primary;
+      font-size: 40px;
+      font-weight: 800;
+    }
+  }
+  &__wrapper {
+    @include flexCenterColumn();
+    gap: 5rem;
+    .services__card {
+      @include flexCenterColumn();
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+        rgba(0, 0, 0, 0.23) 0px 3px 6px;
+      &:hover a {
+        background-color: $clr-primary;
+        color: $clr-light;
+        transition: 0.2s ease;
+      }
+      a {
+        padding: 2rem 0;
+        background-color: $clr-light;
+        width: 100%;
+        text-align: center;
+        color: $clr-primary;
+        position: relative;
+        transition: 0.2s ease;
+        &::before {
+          content: "";
+          position: absolute;
+          border-bottom: 1px solid $clr-primary;
+          width: 90%;
+          display: block;
+          top: 0;
+          left: 2rem;
+        }
+      }
+
+      .services__text {
+        width: 35rem;
+        margin: 1.5rem 2rem;
+        margin-bottom: 5rem;
+        h3 {
+          text-align: center;
+          font-size: 2.5rem;
+          margin-bottom: 4rem;
+        }
+        P {
+          text-align: justify;
+          margin-bottom: 3rem;
+        }
+        ul {
+          list-style: square;
+          list-style-position: inside;
+        }
+      }
+    }
+  }
+  @include mediaQuery($break-lg) {
+    &__wrapper {
+      @include gridEven(3, 0);
+      .services__card {
+        max-width: 40rem;
+        margin: 0 auto;
+        transition: 0.5s ease;
+        &:hover {
+          scale: 1.1;
+          transition: 0.5s ease;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+@use "../abstract/colors" as *;
+
+.btn {
+  display: inline-block;
+  border: 1px solid transparent;
+  padding: 1.5rem 5rem;
+  border-radius: 5rem;
+  text-align: center;
+  font-weight: 600;
+  transition: 0.5s ease;
+  &.bg--transparent {
+    background-color: transparent;
+    color: $clr-light;
+    border: 1px solid $clr-light;
+    transition: 0.2s ease;
+    &:hover {
+      transition: 0.2s ease;
+      color: $clr-primary;
+      background-color: $clr-light;
+    }
+  }
+  &.bg--primary {
+    background-color: $clr-primary;
+    color: $clr-light;
+     &:hover {
+      transition: 0.2s ease;
+      color: $clr-primary;
+      background-color: $clr-light;
+    }       
+  }
+}

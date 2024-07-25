@@ -1,0 +1,47 @@
+@use "../base/base" as *;
+@use "../abstract/colors" as *;
+@use "../abstract/mixins" as *;
+
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: transparent;
+  &__wrapper {
+    @include centerAll();
+
+    .toggle__menu {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      span {
+        width: 2.5rem;
+        height: 0.2rem;
+        background-color: #808080;
+        display: inline-block;
+        border-radius: 50rem;
+        transition: 0.5s ease;
+      }
+    }
+  }
+
+  //   &__nav {
+  //     position: absolute;
+  //     display: flex;
+  //     flex-direction: column;
+  //     justify-content: center;
+  //     align-items: center;
+  //     text-align: center;
+  //     width: 80vw;
+  //     height: 100vh;
+  //     right: -100rem;
+  //     top: 8.8rem;
+  //     // box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  //     transition: 0.5s ease;
+  //     background-color: pink;
+
+  //   }
+  //   .icons {
+  //     display: flex;
+  //   }
+  // }
+}
