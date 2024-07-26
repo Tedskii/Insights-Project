@@ -2,3 +2,42 @@
 @use "../abstract/colors" as *;
 @use "../abstract/mixins" as *;
 
+.footer {
+  background-color: rgb(128, 128, 128, 0.8);
+  padding: 5rem;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    .social__icons {
+      .icons {
+        display: flex;
+        gap: 4rem;
+        a {
+          color: $clr-light;
+        }
+      }
+    }
+    h5 {
+      color: $clr-light;
+      font-weight: 500;
+    }
+  }
+  @include mediaQuery($break-lg) {
+    &__wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      img{
+        order: 2;
+      }
+      .social__icons{
+        order: 1;
+      }
+      h5{
+        order: 3;
+      }
+    }
+  }
+}

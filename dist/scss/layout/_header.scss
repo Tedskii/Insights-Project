@@ -12,14 +12,21 @@
     .toggle__menu {
       display: flex;
       flex-direction: column;
+      align-items: flex-end;
       gap: 0.5rem;
       span {
-        width: 2.5rem;
-        height: 0.2rem;
-        background-color: #808080;
+        width: 3.2rem;
+        height: 0.5rem;
+        background-color: $clr-light;
         display: inline-block;
         border-radius: 50rem;
         transition: 0.5s ease;
+        &:nth-child(2) {
+          width: 2.7rem;
+        }
+        &:last-child {
+          width: 2.3rem;
+        }
       }
     }
   }

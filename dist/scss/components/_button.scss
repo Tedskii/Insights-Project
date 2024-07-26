@@ -22,10 +22,32 @@
   &.bg--primary {
     background-color: $clr-primary;
     color: $clr-light;
-     &:hover {
+    &:hover {
       transition: 0.2s ease;
       color: $clr-primary;
       background-color: $clr-light;
-    }       
+    }
+  }
+  &.rounded--sq {
+    padding: 1rem 2rem;
+    border-radius: 1.2rem;
+    color: $clr-light;
+    background-color: $clr-primary;
+    font-weight: 500;
+    &:hover {
+      background-color: $clr-light;
+      color: $clr-primary;
+    }
+  }
+  &.contact {
+    padding: 1.5rem;
+    background-color: $clr-primary;
+    color: $clr-light;
+    font-weight: 500;
+    &:hover {
+      transition: 0.2s ease;
+      color: $clr-primary;
+      background-color: $clr-light;
+    }
   }
 }
