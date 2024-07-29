@@ -25,6 +25,7 @@
     }
   }
   @include mediaQuery($break-lg) {
+    padding-top: 8rem;
     &__wrapper {
       display: flex;
       flex-direction: row;

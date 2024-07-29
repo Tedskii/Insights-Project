@@ -3,15 +3,13 @@
 @use "../abstract/mixins" as *;
 
 .header {
+  // border-radius: 10px;
   position: fixed;
   width: 100%;
-  background-color: transparent;
+  background-color: $clr-dark;
   z-index: 999;
-  transition: 0.3s ease;
-  &.active {
-    background-color: $clr-dark;
-    transition: 0.3 s ease;
-  }
+  transition: 0.5s ease;
+
   &__nav {
     padding-top: 10rem;
     position: absolute;
@@ -78,7 +76,7 @@
       gap: 0.5rem;
       span {
         width: 3.2rem;
-        height: 0.5rem;
+        height: 0.3rem;
         background-color: $clr-light;
         display: inline-block;
         border-radius: 50rem;
@@ -102,7 +100,7 @@
           }
           &:last-child {
             width: 3.2rem;
-            transform: translate(0px, -14px) rotate(-225deg);
+            transform: translate(0px, -10px) rotate(-225deg);
             transition: 0.5s ease;
           }
         }
@@ -111,14 +109,23 @@
   }
   @include mediaQuery($break-lg) {
     border-radius: 10px;
+    background-color: transparent;
     transition: 0.3s ease;
-    // &.active {
-    //   position: sticky;
-    //   top:0;
-    //   width: 99%;
-    //   margin: 0 auto;
-    //   will-change: position, top;
-    // }
+    .container {
+      transition: 0.3s ease;
+      background-color: transparent;
+    }
+    &.active {
+      background-color: transparent;
+      transition: 0.3s ease;
+      .container {
+        border-radius: 10px;
+        background-color: $clr-dark;
+        width: 70%;
+        margin: 0 auto;
+        transform: translateY(5rem);
+      }
+    }
     &__wrapper {
       .tabs {
         ul {

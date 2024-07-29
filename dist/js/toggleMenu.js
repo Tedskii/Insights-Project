@@ -6,5 +6,12 @@ toggleMenu.addEventListener("click", () => {
   headerNav.classList.toggle("open");
 });
 
+const burgirBtn = document.querySelectorAll(".burgir-btn");
 
+burgirBtn.forEach((burgir) => {
+  burgir.addEventListener("click", () => {
+    toggleMenu.classList.remove("open");
+    headerNav.classList.remove("open");
 
+  });
+});
